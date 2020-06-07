@@ -82,6 +82,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
                 }
             }
         }
+        let ac = UIAlertController(title: "Unsafe Webpage", message: "That website is not allowed.", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        present(ac, animated: true)
         decisionHandler(.cancel)
     }
 
